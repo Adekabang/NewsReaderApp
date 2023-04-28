@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF2592A929FC2EE200972A30 /* NewsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2592A829FC2EE200972A30 /* NewsResponse.swift */; };
+		FF2592AB29FC2F7B00972A30 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2592AA29FC2F7B00972A30 /* News.swift */; };
+		FF2592AD29FC306B00972A30 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2592AC29FC306B00972A30 /* Media.swift */; };
+		FF2592AF29FC309900972A30 /* MediaMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2592AE29FC309900972A30 /* MediaMetadata.swift */; };
+		FF2592B229FC371400972A30 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2592B129FC371400972A30 /* ApiService.swift */; };
 		FF3BD5BE29FAB45E00168614 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3BD5BD29FAB45E00168614 /* AppDelegate.swift */; };
 		FF3BD5C029FAB45E00168614 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3BD5BF29FAB45E00168614 /* SceneDelegate.swift */; };
 		FF3BD5C229FAB45E00168614 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3BD5C129FAB45E00168614 /* ViewController.swift */; };
@@ -16,6 +21,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FF2592A829FC2EE200972A30 /* NewsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsResponse.swift; sourceTree = "<group>"; };
+		FF2592AA29FC2F7B00972A30 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		FF2592AC29FC306B00972A30 /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
+		FF2592AE29FC309900972A30 /* MediaMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaMetadata.swift; sourceTree = "<group>"; };
+		FF2592B129FC371400972A30 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		FF3BD5BA29FAB45E00168614 /* NewsReaderApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsReaderApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF3BD5BD29FAB45E00168614 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF3BD5BF29FAB45E00168614 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +47,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FF2592A729FC2ED000972A30 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FF2592A829FC2EE200972A30 /* NewsResponse.swift */,
+				FF2592AA29FC2F7B00972A30 /* News.swift */,
+				FF2592AC29FC306B00972A30 /* Media.swift */,
+				FF2592AE29FC309900972A30 /* MediaMetadata.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FF2592B029FC370700972A30 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FF2592B129FC371400972A30 /* ApiService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		FF3BD5B129FAB45E00168614 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +85,8 @@
 		FF3BD5BC29FAB45E00168614 /* NewsReaderApp */ = {
 			isa = PBXGroup;
 			children = (
+				FF2592B029FC370700972A30 /* Services */,
+				FF2592A729FC2ED000972A30 /* Models */,
 				FF3BD5BD29FAB45E00168614 /* AppDelegate.swift */,
 				FF3BD5BF29FAB45E00168614 /* SceneDelegate.swift */,
 				FF3BD5C129FAB45E00168614 /* ViewController.swift */,
@@ -139,7 +170,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF3BD5C229FAB45E00168614 /* ViewController.swift in Sources */,
+				FF2592A929FC2EE200972A30 /* NewsResponse.swift in Sources */,
+				FF2592AD29FC306B00972A30 /* Media.swift in Sources */,
+				FF2592AF29FC309900972A30 /* MediaMetadata.swift in Sources */,
 				FF3BD5BE29FAB45E00168614 /* AppDelegate.swift in Sources */,
+				FF2592AB29FC2F7B00972A30 /* News.swift in Sources */,
+				FF2592B229FC371400972A30 /* ApiService.swift in Sources */,
 				FF3BD5C029FAB45E00168614 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

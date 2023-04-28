@@ -24,6 +24,17 @@ class ViewController: UIViewController {
         passwordTitleLabel.text = "Kata Sandi"
         loginButton.setTitle("Masuk", for: UIControl.State.normal)
         loginButton.layer.cornerRadius = 8
+        
+        ApiService.shared.loadNews { result in
+            switch result {
+            case .success(let newsList):
+                print("---- Num Results: \(newsList.count)")
+                print(newsList)
+                self.emailTextField.text = "Num Results: \(newsList.count)"
+            case .failure(let error):
+                print("this is error \(error)")
+            }
+        }
     }
 
     @IBAction func loginButtonTapped(_ sender: Any) {
