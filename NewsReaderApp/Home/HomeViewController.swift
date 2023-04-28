@@ -18,6 +18,7 @@ class HomeViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         tableView.dataSource = self
+        tableView.delegate = self
         
         loadLatestNews()
     }
@@ -46,5 +47,15 @@ extension HomeViewController: UITableViewDataSource {
         let news = latesNewsList[indexPath.row]
         cell.textLabel?.text = "\(indexPath.row+1).  " + news.title
         return cell
+    }
+}
+
+extension HomeViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let news = latesNewsList[indexPath.row]
+        let alert = UIAlertController(title: news.title, message: news.url, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Okay", style: .default))
+        
+        present(alert, animated: true)
     }
 }
