@@ -25,7 +25,7 @@ class ViewController: UIViewController {
         loginButton.setTitle("Masuk", for: UIControl.State.normal)
         loginButton.layer.cornerRadius = 8
         
-        ApiService.shared.loadNews { result in
+        ApiService.shared.loadLatestNews { result in
             switch result {
             case .success(let newsList):
                 print("---- Num Results: \(newsList.count)")

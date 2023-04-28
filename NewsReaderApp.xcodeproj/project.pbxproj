@@ -13,6 +13,7 @@
 		FF2592AD29FC306B00972A30 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2592AC29FC306B00972A30 /* Media.swift */; };
 		FF2592AF29FC309900972A30 /* MediaMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2592AE29FC309900972A30 /* MediaMetadata.swift */; };
 		FF2592B229FC371400972A30 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2592B129FC371400972A30 /* ApiService.swift */; };
+		FF2592B529FC474A00972A30 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2592B429FC474A00972A30 /* HomeViewController.swift */; };
 		FF3BD5BE29FAB45E00168614 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3BD5BD29FAB45E00168614 /* AppDelegate.swift */; };
 		FF3BD5C029FAB45E00168614 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3BD5BF29FAB45E00168614 /* SceneDelegate.swift */; };
 		FF3BD5C229FAB45E00168614 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3BD5C129FAB45E00168614 /* ViewController.swift */; };
@@ -30,6 +31,7 @@
 		FF2592AC29FC306B00972A30 /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
 		FF2592AE29FC309900972A30 /* MediaMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaMetadata.swift; sourceTree = "<group>"; };
 		FF2592B129FC371400972A30 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		FF2592B429FC474A00972A30 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FF3BD5BA29FAB45E00168614 /* NewsReaderApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsReaderApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF3BD5BD29FAB45E00168614 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF3BD5BF29FAB45E00168614 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,7 +68,6 @@
 				804A61B704F7FE4FEC237294 /* Pods-NewsReaderApp.debug.xcconfig */,
 				5EFD4550194923C344253AD7 /* Pods-NewsReaderApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -87,6 +88,14 @@
 				FF2592B129FC371400972A30 /* ApiService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		FF2592B329FC472500972A30 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				FF2592B429FC474A00972A30 /* HomeViewController.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		FF3BD5B129FAB45E00168614 = {
@@ -110,6 +119,7 @@
 		FF3BD5BC29FAB45E00168614 /* NewsReaderApp */ = {
 			isa = PBXGroup;
 			children = (
+				FF2592B329FC472500972A30 /* Home */,
 				FF2592B029FC370700972A30 /* Services */,
 				FF2592A729FC2ED000972A30 /* Models */,
 				FF3BD5BD29FAB45E00168614 /* AppDelegate.swift */,
@@ -243,6 +253,7 @@
 				FF2592AD29FC306B00972A30 /* Media.swift in Sources */,
 				FF2592AF29FC309900972A30 /* MediaMetadata.swift in Sources */,
 				FF3BD5BE29FAB45E00168614 /* AppDelegate.swift in Sources */,
+				FF2592B529FC474A00972A30 /* HomeViewController.swift in Sources */,
 				FF2592AB29FC2F7B00972A30 /* News.swift in Sources */,
 				FF2592B229FC371400972A30 /* ApiService.swift in Sources */,
 				FF3BD5C029FAB45E00168614 /* SceneDelegate.swift in Sources */,
