@@ -23,6 +23,7 @@ class HomeViewController: UIViewController {
         loadLatestNews()
     }
     
+    // MARK: - Helpers
     func loadLatestNews () {
         ApiService.shared.loadLatestNews { result in
             switch result {
@@ -37,6 +38,7 @@ class HomeViewController: UIViewController {
 
 }
 
+// MARK: - UITableViewDataSource
 extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return latesNewsList.count
@@ -50,6 +52,7 @@ extension HomeViewController: UITableViewDataSource {
     }
 }
 
+// MARK: - UITableViewDelegate
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let news = latesNewsList[indexPath.row]
