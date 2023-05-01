@@ -20,6 +20,7 @@
 		FF3BD5C529FAB45E00168614 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF3BD5C329FAB45E00168614 /* Main.storyboard */; };
 		FF3BD5C729FAB46000168614 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF3BD5C629FAB46000168614 /* Assets.xcassets */; };
 		FF3BD5CA29FAB46000168614 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF3BD5C829FAB46000168614 /* LaunchScreen.storyboard */; };
+		FFFEBC3529FFF5310057B9E5 /* NewsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFEBC3429FFF5310057B9E5 /* NewsViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		FF3BD5C629FAB46000168614 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF3BD5C929FAB46000168614 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FF3BD5CB29FAB46000168614 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFFEBC3429FFF5310057B9E5 /* NewsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				FF2592B429FC474A00972A30 /* HomeViewController.swift */,
+				FFFEBC3429FFF5310057B9E5 /* NewsViewCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 				FF3BD5BE29FAB45E00168614 /* AppDelegate.swift in Sources */,
 				FF2592B529FC474A00972A30 /* HomeViewController.swift in Sources */,
 				FF2592AB29FC2F7B00972A30 /* News.swift in Sources */,
+				FFFEBC3529FFF5310057B9E5 /* NewsViewCell.swift in Sources */,
 				FF2592B229FC371400972A30 /* ApiService.swift in Sources */,
 				FF3BD5C029FAB45E00168614 /* SceneDelegate.swift in Sources */,
 			);

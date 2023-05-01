@@ -56,7 +56,17 @@ class ApiService {
         } else {
             completion(.success([]))
         }
-            
-        
+    }
+    func downloadImage(url:String, completion: @escaping(Result<UIImage?, Error>) -> Void) {
+        AF.request(url)
+            .responseData { response in
+                switch response.result {
+                    case .success (let data):
+                        let image = UIImage(data: data)
+                        completion(.success(image))
+                    case .failure(let error):
+                        completion(.failure(error))
+                }
+            }
     }
 }
