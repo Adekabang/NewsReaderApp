@@ -219,7 +219,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fPi-h9-mhK">
-                                                    <rect key="frame" x="20" y="78" width="353" height="200"/>
+                                                    <rect key="frame" x="0.0" y="78" width="393" height="200"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="200" id="hGK-Rg-OUp"/>
@@ -232,33 +232,34 @@
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="1i1-Ze-Adh">
-                                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="AFR-Hp-tkv">
-                                                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                             </collectionViewCellContentView>
                                                         </collectionViewCell>
                                                     </cells>
                                                 </collectionView>
                                                 <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="10" currentPage="1" translatesAutoresizingMaskIntoConstraints="NO" id="6D7-Nc-gnc">
-                                                    <rect key="frame" x="0.0" y="290" width="393" height="26"/>
+                                                    <rect key="frame" x="40" y="278" width="313" height="52"/>
                                                     <color key="pageIndicatorTintColor" systemColor="separatorColor"/>
                                                     <color key="currentPageIndicatorTintColor" name="AccentColor"/>
                                                 </pageControl>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="fPi-h9-mhK" secondAttribute="trailing" id="BfE-td-Ek2"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="0ak-aU-lB9" secondAttribute="trailing" constant="20" id="BoE-uN-iRs"/>
-                                                <constraint firstItem="6D7-Nc-gnc" firstAttribute="leading" secondItem="45u-8i-CDT" secondAttribute="leading" id="Fvg-cD-Gks"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="6D7-Nc-gnc" secondAttribute="bottom" id="CDu-Lc-7zM"/>
                                                 <constraint firstItem="nut-7x-6ld" firstAttribute="top" secondItem="0ak-aU-lB9" secondAttribute="bottom" constant="12" id="IaM-6P-DJc"/>
                                                 <constraint firstItem="nut-7x-6ld" firstAttribute="leading" secondItem="0ak-aU-lB9" secondAttribute="leading" id="Lkd-Jt-Qd6"/>
-                                                <constraint firstItem="6D7-Nc-gnc" firstAttribute="top" secondItem="fPi-h9-mhK" secondAttribute="bottom" constant="12" id="OvI-Zt-G2S"/>
                                                 <constraint firstItem="fPi-h9-mhK" firstAttribute="top" secondItem="nut-7x-6ld" secondAttribute="bottom" constant="8" id="T03-8w-clV"/>
-                                                <constraint firstItem="fPi-h9-mhK" firstAttribute="leading" secondItem="45u-8i-CDT" secondAttribute="leadingMargin" id="TkM-8Q-Ny1"/>
                                                 <constraint firstItem="0ak-aU-lB9" firstAttribute="leading" secondItem="45u-8i-CDT" secondAttribute="leadingMargin" constant="20" id="Vao-4F-Ph3"/>
-                                                <constraint firstAttribute="trailing" secondItem="6D7-Nc-gnc" secondAttribute="trailing" id="e3h-BB-YKl"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="fPi-h9-mhK" secondAttribute="trailing" id="m9u-IE-PV4"/>
+                                                <constraint firstItem="6D7-Nc-gnc" firstAttribute="leading" secondItem="45u-8i-CDT" secondAttribute="leadingMargin" constant="20" id="ccR-UP-KjP"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="6D7-Nc-gnc" secondAttribute="trailing" constant="20" id="dfg-tV-afp"/>
+                                                <constraint firstItem="fPi-h9-mhK" firstAttribute="leading" secondItem="45u-8i-CDT" secondAttribute="leading" id="ftf-nL-iiJ"/>
                                                 <constraint firstItem="0ak-aU-lB9" firstAttribute="top" secondItem="45u-8i-CDT" secondAttribute="topMargin" constant="10" id="qer-2k-IzY"/>
+                                                <constraint firstItem="6D7-Nc-gnc" firstAttribute="top" secondItem="fPi-h9-mhK" secondAttribute="bottom" id="uVW-QJ-FKo"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>

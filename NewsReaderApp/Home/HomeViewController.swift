@@ -59,7 +59,7 @@ extension HomeViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
-            return latestNewsList.count > 0 ? 2 : 0
+            return latestNewsList.count > 0 ? 1 : 0
         } else {
             return latestNewsList.count
         }
