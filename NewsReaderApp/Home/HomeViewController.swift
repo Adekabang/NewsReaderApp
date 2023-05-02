@@ -6,7 +6,7 @@
 //
 
 import UIKit
-//import SDWebImage
+import SDWebImage
 import SafariServices
 
 class HomeViewController: UIViewController {
@@ -53,31 +53,48 @@ class HomeViewController: UIViewController {
 
 // MARK: - UITableViewDataSource
 extension HomeViewController: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return latestNewsList.count
+        if section == 0 {
+            return latestNewsList.count > 0 ? 2 : 0
+        } else {
+            return latestNewsList.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "custom_news_cell", for: indexPath) as! NewsViewCell
-        let news = latestNewsList[indexPath.row]
         
-        cell.titleLabel.text = news.title
-        cell.dateLabel.text = "\(news.publishDate) · \(news.section)"
-
-        if let url = news.media.first?.metadata.last?.url {
-            ApiService.shared.downloadImage(url: url) { result in
-                switch result {
-                case .success (let image):
-                    cell.thumbImageView.image = image
-                case .failure:
-                    cell.thumbImageView.image = nil
-                }
-            }
+        if indexPath.section == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "top_news_list_cell", for: indexPath)
+            return cell
         } else {
-            cell.thumbImageView.image = nil
+            let cell = tableView.dequeueReusableCell(withIdentifier: "custom_news_cell", for: indexPath) as! NewsViewCell
+            let news = latestNewsList[indexPath.row]
+            
+            cell.titleLabel.text = news.title
+            cell.dateLabel.text = "\(news.publishDate) · \(news.section)"
+            
+            if let url = news.media.first?.metadata.last?.url {
+//                ApiService.shared.downloadImage(url: url) { result in
+//                    switch result {
+//                    case .success (let image):
+//                        cell.thumbImageView.image = image
+//                    case .failure:
+//                        cell.thumbImageView.image = nil
+//                    }
+//                }
+                cell.thumbImageView.sd_setImage(with: URL(string:url))
+
+            } else {
+                cell.thumbImageView.image = nil
+            }
+            //        cell.textLabel?.text = "\(indexPath.row+1).  " + news.title
+            return cell
         }
-//        cell.textLabel?.text = "\(indexPath.row+1).  " + news.title
-        return cell
+        
     }
 }
 

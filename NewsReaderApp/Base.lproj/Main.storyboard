@@ -7,6 +7,7 @@
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -149,7 +150,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YJZ-QE-zbf">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YJZ-QE-zbf">
                                                     <rect key="frame" x="20" y="10" width="80" height="80"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="80" id="2Dp-Kk-FMr"/>
@@ -197,6 +198,69 @@
                                             <outlet property="thumbImageView" destination="YJZ-QE-zbf" id="Jo3-mZ-WvQ"/>
                                             <outlet property="titleLabel" destination="BOB-Xv-1gm" id="RZj-W6-xlZ"/>
                                         </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="top_news_list_cell" rowHeight="341" id="w9T-cP-Dna">
+                                        <rect key="frame" x="0.0" y="193.66666793823242" width="393" height="341"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="w9T-cP-Dna" id="45u-8i-CDT">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="341"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News for You" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ak-aU-lB9">
+                                                    <rect key="frame" x="40" y="21" width="313" height="21"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top 20 News of the day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nut-7x-6ld">
+                                                    <rect key="frame" x="40" y="54" width="143.33333333333334" height="16"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                                    <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fPi-h9-mhK">
+                                                    <rect key="frame" x="20" y="78" width="353" height="200"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="200" id="hGK-Rg-OUp"/>
+                                                    </constraints>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="luF-gc-3XB">
+                                                        <size key="itemSize" width="128" height="128"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="1i1-Ze-Adh">
+                                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="AFR-Hp-tkv">
+                                                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                            </collectionViewCellContentView>
+                                                        </collectionViewCell>
+                                                    </cells>
+                                                </collectionView>
+                                                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="10" currentPage="1" translatesAutoresizingMaskIntoConstraints="NO" id="6D7-Nc-gnc">
+                                                    <rect key="frame" x="0.0" y="290" width="393" height="26"/>
+                                                    <color key="pageIndicatorTintColor" systemColor="separatorColor"/>
+                                                    <color key="currentPageIndicatorTintColor" name="AccentColor"/>
+                                                </pageControl>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="0ak-aU-lB9" secondAttribute="trailing" constant="20" id="BoE-uN-iRs"/>
+                                                <constraint firstItem="6D7-Nc-gnc" firstAttribute="leading" secondItem="45u-8i-CDT" secondAttribute="leading" id="Fvg-cD-Gks"/>
+                                                <constraint firstItem="nut-7x-6ld" firstAttribute="top" secondItem="0ak-aU-lB9" secondAttribute="bottom" constant="12" id="IaM-6P-DJc"/>
+                                                <constraint firstItem="nut-7x-6ld" firstAttribute="leading" secondItem="0ak-aU-lB9" secondAttribute="leading" id="Lkd-Jt-Qd6"/>
+                                                <constraint firstItem="6D7-Nc-gnc" firstAttribute="top" secondItem="fPi-h9-mhK" secondAttribute="bottom" constant="12" id="OvI-Zt-G2S"/>
+                                                <constraint firstItem="fPi-h9-mhK" firstAttribute="top" secondItem="nut-7x-6ld" secondAttribute="bottom" constant="8" id="T03-8w-clV"/>
+                                                <constraint firstItem="fPi-h9-mhK" firstAttribute="leading" secondItem="45u-8i-CDT" secondAttribute="leadingMargin" id="TkM-8Q-Ny1"/>
+                                                <constraint firstItem="0ak-aU-lB9" firstAttribute="leading" secondItem="45u-8i-CDT" secondAttribute="leadingMargin" constant="20" id="Vao-4F-Ph3"/>
+                                                <constraint firstAttribute="trailing" secondItem="6D7-Nc-gnc" secondAttribute="trailing" id="e3h-BB-YKl"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="fPi-h9-mhK" secondAttribute="trailing" id="m9u-IE-PV4"/>
+                                                <constraint firstItem="0ak-aU-lB9" firstAttribute="top" secondItem="45u-8i-CDT" secondAttribute="topMargin" constant="10" id="qer-2k-IzY"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -287,6 +351,9 @@
         </namedColor>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="separatorColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
