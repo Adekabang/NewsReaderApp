@@ -100,19 +100,34 @@
         <!--Reading List-->
         <scene sceneID="ShW-JH-dd7">
             <objects>
-                <viewController id="O6e-bT-tu8" sceneMemberID="viewController">
+                <viewController id="O6e-bT-tu8" customClass="ReadingListViewController" customModule="NewsReaderApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="me2-Ef-Ku1">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="LS7-SA-9Mo">
+                                <rect key="frame" x="0.0" y="103" width="393" height="749"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="VIa-zK-wdB"/>
-                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LS7-SA-9Mo" firstAttribute="top" secondItem="VIa-zK-wdB" secondAttribute="top" id="aeK-qS-qjb"/>
+                            <constraint firstItem="VIa-zK-wdB" firstAttribute="trailing" secondItem="LS7-SA-9Mo" secondAttribute="trailing" id="dyY-83-IkZ"/>
+                            <constraint firstAttribute="bottom" secondItem="LS7-SA-9Mo" secondAttribute="bottom" id="knn-kp-AdA"/>
+                            <constraint firstItem="LS7-SA-9Mo" firstAttribute="leading" secondItem="VIa-zK-wdB" secondAttribute="leading" id="rGj-Xs-tHn"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Reading List" id="IIU-ZJ-t6E"/>
+                    <connections>
+                        <outlet property="tableView" destination="LS7-SA-9Mo" id="won-8O-xl6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OYk-qZ-1co" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1955" y="13"/>
+            <point key="canvasLocation" x="1954.9618320610687" y="12.67605633802817"/>
         </scene>
         <!--Home-->
         <scene sceneID="ASq-DH-VAY">
@@ -143,67 +158,8 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="custom_news_cell" rowHeight="100" id="gTu-C2-biQ" customClass="NewsViewCell" customModule="NewsReaderApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="93.666667938232422" width="393" height="100"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gTu-C2-biQ" id="kVI-Pb-Jm4">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YJZ-QE-zbf">
-                                                    <rect key="frame" x="20" y="10" width="80" height="80"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="80" id="2Dp-Kk-FMr"/>
-                                                        <constraint firstAttribute="height" constant="80" id="RWQ-x9-ahe"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News Title News Title News Title News Title News Title News Title News Title News Title News Title News Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BOB-Xv-1gm">
-                                                    <rect key="frame" x="110" y="10" width="231" height="42.333333333333336"/>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date &amp; Section" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HiY-Bp-RLk">
-                                                    <rect key="frame" x="110" y="60.333333333333343" width="103" height="18"/>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                                    <color key="textColor" systemColor="secondaryLabelColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YWl-Xd-47p">
-                                                    <rect key="frame" x="349" y="32" width="36" height="36"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="36" id="9xa-vF-nwc"/>
-                                                        <constraint firstAttribute="width" constant="36" id="ePt-M7-7uA"/>
-                                                    </constraints>
-                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                    <state key="normal" image="bookmark" catalog="system"/>
-                                                    <connections>
-                                                        <action selector="bookmarkButtonTapped:" destination="gTu-C2-biQ" eventType="touchUpInside" id="ggD-85-KTz"/>
-                                                    </connections>
-                                                </button>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="YJZ-QE-zbf" firstAttribute="top" secondItem="kVI-Pb-Jm4" secondAttribute="top" constant="10" id="FwV-jo-w0g"/>
-                                                <constraint firstItem="YJZ-QE-zbf" firstAttribute="leading" secondItem="kVI-Pb-Jm4" secondAttribute="leading" constant="20" id="Gf9-cD-8Py"/>
-                                                <constraint firstItem="HiY-Bp-RLk" firstAttribute="top" secondItem="BOB-Xv-1gm" secondAttribute="bottom" constant="8" id="Jnb-I0-WLc"/>
-                                                <constraint firstItem="BOB-Xv-1gm" firstAttribute="top" secondItem="YJZ-QE-zbf" secondAttribute="top" id="Qgm-mH-EYI"/>
-                                                <constraint firstAttribute="bottom" secondItem="YJZ-QE-zbf" secondAttribute="bottom" constant="10" id="cwN-i2-2JR"/>
-                                                <constraint firstItem="YWl-Xd-47p" firstAttribute="leading" secondItem="BOB-Xv-1gm" secondAttribute="trailing" constant="8" id="fQ4-vf-JuD"/>
-                                                <constraint firstAttribute="trailing" secondItem="YWl-Xd-47p" secondAttribute="trailing" constant="8" id="gDW-Ha-pvD"/>
-                                                <constraint firstItem="YWl-Xd-47p" firstAttribute="centerY" secondItem="kVI-Pb-Jm4" secondAttribute="centerY" id="iKD-ge-XRk"/>
-                                                <constraint firstItem="BOB-Xv-1gm" firstAttribute="leading" secondItem="YJZ-QE-zbf" secondAttribute="trailing" constant="10" id="rry-eM-o4L"/>
-                                                <constraint firstItem="HiY-Bp-RLk" firstAttribute="leading" secondItem="BOB-Xv-1gm" secondAttribute="leading" id="z7b-le-XBP"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="bookmarkButton" destination="YWl-Xd-47p" id="3qL-mY-FDh"/>
-                                            <outlet property="dateLabel" destination="HiY-Bp-RLk" id="IOd-gF-FTT"/>
-                                            <outlet property="thumbImageView" destination="YJZ-QE-zbf" id="Jo3-mZ-WvQ"/>
-                                            <outlet property="titleLabel" destination="BOB-Xv-1gm" id="RZj-W6-xlZ"/>
-                                        </connections>
-                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="top_news_list_cell" rowHeight="375" id="w9T-cP-Dna" customClass="TopNewsListViewCell" customModule="NewsReaderApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="193.66666793823242" width="393" height="375"/>
+                                        <rect key="frame" x="0.0" y="93.666667938232422" width="393" height="375"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="w9T-cP-Dna" id="45u-8i-CDT">
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="375"/>
@@ -386,7 +342,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bookmark" catalog="system" width="110" height="128"/>
         <image name="house" catalog="system" width="128" height="104"/>
         <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="newspaper" catalog="system" width="128" height="111"/>
@@ -402,9 +357,6 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

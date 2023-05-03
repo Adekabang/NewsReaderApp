@@ -22,6 +22,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        tableView.register(UINib(nibName: "NewsViewCell", bundle: nil), forCellReuseIdentifier: "custom_news_cell")
         tableView.dataSource = self
         tableView.delegate = self
         
@@ -29,9 +30,16 @@ class HomeViewController: UIViewController {
         tableView.refreshControl = refreshControl
         self.refreshControl = refreshControl
         refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.readingListDeleted(_:)), name: .deleteReadingList, object: nil)
+        
         refreshControl.beginRefreshing()
         loadLatestNews()
         loadTopNews()
+    }
+    
+    @objc func readingListDeleted(_ sender: Any){
+        tableView.reloadData()
     }
     
     @objc func refresh(_ sender: Any) {
@@ -104,6 +112,18 @@ extension HomeViewController: UITableViewDataSource {
             
             cell.titleLabel.text = news.title
             cell.dateLabel.text = "\(news.publishDate) · \(news.section)"
+            
+            if CoreDataStorage.shared.isAddedToReadingList(newsId: news.id){
+                if #available(iOS 13.0, *) {
+                    cell.bookmarkButton.setImage(UIImage(systemName: "bookmark.fill"), for: .normal)
+                }
+                cell.bookmarkButton.isEnabled = false
+            } else {
+                if #available(iOS 13.0, *) {
+                    cell.bookmarkButton.setImage(UIImage(systemName: "bookmark"), for: .normal)
+                }
+                cell.bookmarkButton.isEnabled = true
+            }
             
             cell.delegate = self
             
@@ -206,7 +226,12 @@ extension HomeViewController: NewsViewCellDelegate {
     func NewsViewCellBookmarkButtonTapped(_ cell: NewsViewCell) {
         if let indexPath = tableView.indexPath(for: cell) {
             let news = latestNewsList[indexPath.row]
-            print(news.title)
+            CoreDataStorage.shared.addReadingList(news: news)
+                        
+            if #available(iOS 13.0, *) {
+                cell.bookmarkButton.setImage(UIImage(systemName: "bookmark.fill"), for: .normal)
+            }
+            cell.bookmarkButton.isEnabled = false
         }
     }
 

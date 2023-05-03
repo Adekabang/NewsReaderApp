@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="custom_news_cell" rowHeight="100" id="8SS-py-zNe" customClass="NewsViewCell" customModule="NewsReaderApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8SS-py-zNe" id="wng-WW-psD">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AVH-7q-yvU">
+                        <rect key="frame" x="20" y="10" width="80" height="80"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="kg0-D2-31K"/>
+                            <constraint firstAttribute="height" constant="80" id="rpl-zt-iaw"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News Title News Title News Title News Title News Title News Title News Title News Title News Title News Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yl2-hI-dqf">
+                        <rect key="frame" x="110" y="10" width="231" height="42.333333333333336"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date &amp; Section" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M7j-fD-Nc5">
+                        <rect key="frame" x="110" y="60.333333333333343" width="103" height="18"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ix-oU-1h9">
+                        <rect key="frame" x="349" y="32" width="36" height="36"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="36" id="eEq-51-GXI"/>
+                            <constraint firstAttribute="height" constant="36" id="o7e-Gr-WF3"/>
+                        </constraints>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" image="bookmark" catalog="system"/>
+                        <connections>
+                            <action selector="bookmarkButtonTapped:" destination="8SS-py-zNe" eventType="touchUpInside" id="eXl-KY-wFj"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="4ix-oU-1h9" firstAttribute="leading" secondItem="yl2-hI-dqf" secondAttribute="trailing" constant="8" id="7n7-y6-4Bk"/>
+                    <constraint firstAttribute="bottom" secondItem="AVH-7q-yvU" secondAttribute="bottom" constant="10" id="C96-u5-iy0"/>
+                    <constraint firstItem="AVH-7q-yvU" firstAttribute="leading" secondItem="wng-WW-psD" secondAttribute="leading" constant="20" id="EUp-zW-2Lv"/>
+                    <constraint firstItem="M7j-fD-Nc5" firstAttribute="top" secondItem="yl2-hI-dqf" secondAttribute="bottom" constant="8" id="Ga2-aR-k78"/>
+                    <constraint firstItem="M7j-fD-Nc5" firstAttribute="leading" secondItem="yl2-hI-dqf" secondAttribute="leading" id="QhQ-vp-9qL"/>
+                    <constraint firstItem="yl2-hI-dqf" firstAttribute="top" secondItem="AVH-7q-yvU" secondAttribute="top" id="Rht-7C-RTW"/>
+                    <constraint firstItem="4ix-oU-1h9" firstAttribute="centerY" secondItem="wng-WW-psD" secondAttribute="centerY" id="Wb0-6p-hAY"/>
+                    <constraint firstAttribute="trailing" secondItem="4ix-oU-1h9" secondAttribute="trailing" constant="8" id="dFo-3j-49T"/>
+                    <constraint firstItem="yl2-hI-dqf" firstAttribute="leading" secondItem="AVH-7q-yvU" secondAttribute="trailing" constant="10" id="gT1-Dd-uWx"/>
+                    <constraint firstItem="AVH-7q-yvU" firstAttribute="top" secondItem="wng-WW-psD" secondAttribute="top" constant="10" id="lOD-ZW-zin"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="bookmarkButton" destination="4ix-oU-1h9" id="Hrq-ZL-ase"/>
+                <outlet property="dateLabel" destination="M7j-fD-Nc5" id="W70-nP-oBz"/>
+                <outlet property="thumbImageView" destination="AVH-7q-yvU" id="gOQ-qs-iQP"/>
+                <outlet property="titleLabel" destination="yl2-hI-dqf" id="5Xd-kF-msF"/>
+            </connections>
+            <point key="canvasLocation" x="134" y="56"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="bookmark" catalog="system" width="110" height="128"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
