@@ -20,6 +20,7 @@
 		FF3BD5C529FAB45E00168614 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF3BD5C329FAB45E00168614 /* Main.storyboard */; };
 		FF3BD5C729FAB46000168614 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF3BD5C629FAB46000168614 /* Assets.xcassets */; };
 		FF3BD5CA29FAB46000168614 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF3BD5C829FAB46000168614 /* LaunchScreen.storyboard */; };
+		FF6ADE502A027D7500783A38 /* NewsReader.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FF6ADE4E2A027D7500783A38 /* NewsReader.xcdatamodeld */; };
 		FFCB00FB2A01261500F71153 /* TopNewsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCB00FA2A01261500F71153 /* TopNewsViewCell.swift */; };
 		FFFEBC3529FFF5310057B9E5 /* NewsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFEBC3429FFF5310057B9E5 /* NewsViewCell.swift */; };
 		FFFEBC372A011E510057B9E5 /* TopNewsListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFEBC362A011E510057B9E5 /* TopNewsListViewCell.swift */; };
@@ -43,6 +44,7 @@
 		FF3BD5C629FAB46000168614 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF3BD5C929FAB46000168614 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FF3BD5CB29FAB46000168614 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF6ADE4F2A027D7500783A38 /* NewsReader.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NewsReader.xcdatamodel; sourceTree = "<group>"; };
 		FFCB00FA2A01261500F71153 /* TopNewsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopNewsViewCell.swift; sourceTree = "<group>"; };
 		FFFEBC3429FFF5310057B9E5 /* NewsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewCell.swift; sourceTree = "<group>"; };
 		FFFEBC362A011E510057B9E5 /* TopNewsListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopNewsListViewCell.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				FF3BD5C629FAB46000168614 /* Assets.xcassets */,
 				FF3BD5C829FAB46000168614 /* LaunchScreen.storyboard */,
 				FF3BD5CB29FAB46000168614 /* Info.plist */,
+				FF6ADE4E2A027D7500783A38 /* NewsReader.xcdatamodeld */,
 			);
 			path = NewsReaderApp;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				FF2592A929FC2EE200972A30 /* NewsResponse.swift in Sources */,
 				FF2592AD29FC306B00972A30 /* Media.swift in Sources */,
 				FFCB00FB2A01261500F71153 /* TopNewsViewCell.swift in Sources */,
+				FF6ADE502A027D7500783A38 /* NewsReader.xcdatamodeld in Sources */,
 				FF2592AF29FC309900972A30 /* MediaMetadata.swift in Sources */,
 				FFFEBC372A011E510057B9E5 /* TopNewsListViewCell.swift in Sources */,
 				FF3BD5BE29FAB45E00168614 /* AppDelegate.swift in Sources */,
@@ -492,6 +496,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FF6ADE4E2A027D7500783A38 /* NewsReader.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FF6ADE4F2A027D7500783A38 /* NewsReader.xcdatamodel */,
+			);
+			currentVersion = FF6ADE4F2A027D7500783A38 /* NewsReader.xcdatamodel */;
+			path = NewsReader.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = FF3BD5B229FAB45E00168614 /* Project object */;
 }
