@@ -239,6 +239,9 @@
                                                     <rect key="frame" x="40" y="334" width="313" height="30"/>
                                                     <color key="pageIndicatorTintColor" systemColor="separatorColor"/>
                                                     <color key="currentPageIndicatorTintColor" name="AccentColor"/>
+                                                    <connections>
+                                                        <action selector="pageControlValueChanged:" destination="w9T-cP-Dna" eventType="valueChanged" id="egD-09-P6Q"/>
+                                                    </connections>
                                                 </pageControl>
                                             </subviews>
                                             <constraints>

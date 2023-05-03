@@ -13,6 +13,8 @@ class HomeViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     weak var refreshControl: UIRefreshControl!
+    
+    weak var collectionView: UICollectionView?
     weak var pageControl: UIPageControl?
     
     var topNewsList: [News] = []
@@ -104,6 +106,8 @@ extension HomeViewController: UITableViewDataSource {
             cell.collectionView.delegate = self
             cell.collectionView.reloadData()
             
+            self.collectionView = cell.collectionView
+            cell.delegate = self
             
             return cell
         } else {
@@ -235,4 +239,12 @@ extension HomeViewController: NewsViewCellDelegate {
         }
     }
 
+}
+
+// MARK: - TopNewsListViewCellDelegate
+extension HomeViewController: TopNewsListViewCellDelegate {
+    func topNewsListViewCellPageControlValueChanged(_ cell: TopNewsListViewCell) {
+        let page = cell.pageControl.currentPage
+        collectionView?.scrollToItem(at: IndexPath(item: page, section: 0), at: .centeredHorizontally, animated: true)
+    }
 }
